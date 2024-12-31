@@ -6,7 +6,7 @@
     <title>Unity WebGL Player | GameDevSim</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
+    <canvas id="unity-canvas" tabindex="-1" style="width: 100%; height: 100%;"></canvas>
     <script src="Build/MiniGame.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -25,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/MiniGame.data",
-        frameworkUrl: "Build/MiniGame.framework.js",
-        codeUrl: "Build/MiniGame.wasm",
+        dataUrl: "Build/MiniGame.data.gz",
+        frameworkUrl: "Build/MiniGame.framework.js.gz",
+        codeUrl: "Build/MiniGame.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "GameDevSim",
